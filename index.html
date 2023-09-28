@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Name Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var nomes = [];
+
+        fetch('names.txt')
+        .then(response => response.text())
+        .then(data => {
+            nomes = data.split(',');
+        });
+
+        function gerarNomes(quantidade) {
+            var nomesGerados = [];
+            var copiaNomes = [...nomes];
+            for(var i = 0; i < quantidade; i++){
+                var index = Math.floor(Math.random() * copiaNomes.length);
+                var nome = copiaNomes[index];
+                nomesGerados.push(nome);
+                copiaNomes.splice(index, 1);
+            }
+            document.getElementById('nome').innerHTML = nomesGerados.join('<br>');
+        }
+    </script>
+</head>
+<body>
+    <h1>Capybara Name Generator</h1>
+
+    <div>
+        <div><button class="btn" onclick="gerarNomes(5)">Generate</button></div>
+        <div id="nome"></div>
+    </div>
+
+    <footer>
+        <div class="grass"><img src="img/grass.png"></div>
+        <div class="capybara1"><img src="img/capybara1.png" width="100%"></div>
+        <div class="capybara2"><img src="img/capybara2.png"></div>
+        <div class="rock1"><img src="img/rock1.png"></div>
+        <div class="rock2"><img src="img/rock2.png"></div>
+    </footer>
+</body>
+</html>

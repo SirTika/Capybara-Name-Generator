@@ -1,0 +1,153 @@
+@font-face {
+    font-family: '8bit';
+    src: url('fonts/8-bit\ Arcade\ In.ttf');
+}
+
+
+body {
+    font-family: '8bit';
+    margin: 0;
+    background-image: url('img/skyClouds.png');
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+h1 {
+    position: relative;
+    font-size: 90px;
+    text-align: center;
+    font-weight: lighter;
+    color: #b16139;
+    text-shadow: -1px 0 #45283c, 0 4px #45283c, 1px 0 #45283c, 0 -1px #45283c;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 20px;
+    z-index: 11; 
+    border-image: url('img/border.png') 8 fill  / 40px / 40px;
+    background-color: #e9b076;
+    image-rendering: pixelated;
+}
+
+.btn {
+    display: block;
+    position: relative;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: '8bit';
+    font-size: 50px;
+    text-align: center;
+    font-weight: lighter;
+    color: #b16139;
+    text-shadow: -1px 0 #45283c, 0 3px #45283c, 1px 0 #45283c, 0 -1px #45283c;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-image: url('img/border.png') 8 fill  / 32px / 32px;
+    background-color: #e9b076;
+    image-rendering: pixelated;
+    user-select: none;
+    transition: transform 0.3s ease;
+    z-index: 12; 
+}
+
+.btn:hover {
+    transform: scale(1.14);
+}
+
+#nome {
+    display: block;
+    margin-top: 72px;
+    margin-left: 30% ;
+    margin-right: 30% ;
+    font-family: '8bit';
+    font-size: 50px;
+    text-align: center;
+    font-weight: lighter;
+    color: #b16139;
+    text-shadow: -1px 0 #45283c, 0 3px #45283c, 1px 0 #45283c, 0 -1px #45283c;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-image: url('img/border.png') 8 fill  / 32px / 32px;
+    background-color: #e9b076;
+    image-rendering: pixelated;
+    z-index: 12; 
+}
+
+.grass {
+    position: fixed;
+    bottom: 0;
+    background-image: url('img/grass.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    z-index: 9;
+}
+
+.capybara1 {
+    position: fixed;
+    bottom: 0;
+    margin-left: 1%;
+    z-index: 4;
+}
+
+.capybara2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 210px;
+    z-index: 5;
+}
+
+.rock1 {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    left: 30%;
+    z-index: 5;
+}
+
+.rock2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+@media screen and (max-width: 1000px) {
+  .capybara1 img {
+    width: 80%;
+    left: -30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .capybara1 {
+    bottom: 30px;
+    left: -30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .capybara2 img {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .capybara2 {
+    right: -80px;
+    margin: 0;
+    padding: 0;
+  }
+
+   .rock1 img, .rock2 img {
+    display: none;
+  }
+}
